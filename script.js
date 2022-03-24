@@ -3,6 +3,9 @@ console.log('This is my PostMaster Project (PostMan Clone)');
 console.log("\n");
 
 
+// Reference of Dummy Get and Post Request -> JSNPlaceholder
+
+
 
 
 // Utility functions:
@@ -17,7 +20,11 @@ function getElementFromString(string) {
 
 
 
+
+
 /////////////////////////////////////////////////////////////////////////////////
+
+
 
 
 
@@ -50,7 +57,13 @@ jsonRadio.addEventListener('click', () => {
 
 
 
+
 /////////////////////////////////////////////////////////////////
+
+
+
+
+
 
 
 
@@ -110,19 +123,28 @@ addParam.addEventListener('click', () => {
 
 
 
+
+
+
+
+
 // If the user clicks on submit button
 let submit = document.getElementById('submit');
 
+
 submit.addEventListener('click', () => {
+
     // Show please wait in the response box to request patience from the user
     // document.getElementById('responseJsonText').value = "Please wait.. Fetching response...";
     document.getElementById('responsePrism').innerHTML = "Please wait.. Fetching response...";
+
 
     // Fetch all the values user has entered
     let url = document.getElementById("url").value;
     let requestType = document.querySelector("input[name='requestType']:checked").value;
     let contentType = document.querySelector("input[name='contentType']:checked").value;
  
+
     // If user has used params option instead of json, collect all the parameters in an object
     if (contentType == 'params') {
         data = {};  // make a blank object
@@ -185,6 +207,7 @@ submit.addEventListener('click', () => {
         });
 
     }
+
 
 
 });
